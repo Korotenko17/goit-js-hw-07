@@ -9,11 +9,14 @@ const ingredients = [
     "Приправы"
   ];
 
-  const ulList = document.getElementById("ingredients");
-  const foodIngredients = ingredients.forEach(ingredient => {
-    const items = document.createElement("li");
-    items.innerHTML = ingredient;
-    ulList.append(items);
-  });
-
-  
+const ulList = document.querySelector('#ingredients');
+function createElement(arr) {
+    let itemsArr = [];
+    arr.forEach(item => {
+        const items = document.createElement('li');
+        items.textContent = item;
+        itemsArr.push(items);
+    });
+    return ulList.prepend(...itemsArr);
+}
+createElement(ingredients);
