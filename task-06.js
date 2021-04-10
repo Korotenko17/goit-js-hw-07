@@ -10,11 +10,11 @@ inputVal.oninput = function() {
     inputVal.classList.remove("invalid");
     inputVal.classList.add("valid");
   }
-  if (inputVal.value.length === 0) {
+  else if (inputVal.value.length === 0) {
     inputVal.classList.remove("valid");
     inputVal.classList.remove("invalid");
   }
-  if (inputVal.value.length !== intTotallenght && inputVal.value.length !== 0) {
+  else if (inputVal.value.length !== intTotallenght && inputVal.value.length !== 0) {
     inputVal.classList.add("invalid");
   }
 };
